@@ -307,10 +307,13 @@ module.exports = function(ctrl) {
       ].join(' ')
     },
     children: [{
-      tag: 'cg-helper',
+      tag: 'cg-helper-wrap',
       children: [{
-        tag: 'cg-container',
-        children: [renderBoard(ctrl)]
+        tag: 'cg-helper',
+        children: [{
+          tag: 'cg-container',
+          children: [renderBoard(ctrl)]
+        }]
       }]
     }]
   };
